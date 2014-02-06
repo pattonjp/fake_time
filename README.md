@@ -1,6 +1,5 @@
 # YNot
 
-TODO: Write a gem description
 
 ## Installation
 
@@ -18,13 +17,14 @@ Or install it yourself as:
 
 ## Usage
 
-From console run rake console to test
+From console
+    $ rake console to test
  
-  YNot.add_minutes string_time, minutes
+    YNot.add_minutes string_time, minutes
 
-  where string_time is in the format "[H]H:MM {AM|PM}"
-
-  and minutes is an integer
+where string_time is in the format "[H]H:MM {AM|PM}"
+  
+and minutes is an integer
 
 
 
