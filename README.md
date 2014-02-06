@@ -18,12 +18,15 @@ Or install it yourself as:
 
 ## Usage
 
- 
-YNot.add_minutes string_time, minutes
-where string_time is in the format "[H]H:MM {AM|PM}"
-and minutes is an integer
-
 From console run rake console to test
+ 
+  YNot.add_minutes string_time, minutes
+
+  where string_time is in the format "[H]H:MM {AM|PM}"
+
+  and minutes is an integer
+
+
 
 ## Contributing
 
