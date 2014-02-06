@@ -6,3 +6,10 @@ RSpec::Core::RakeTask.new('spec')
 
 # If you want to make this the default task
 task :default => :spec
+
+task :console do
+  require 'pry'
+  require 'y_not' # You know what to do.
+  ARGV.clear
+  Pry.start
+end

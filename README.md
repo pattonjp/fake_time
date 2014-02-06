@@ -18,7 +18,12 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+ 
+YNot.add_minutes string_time, minutes
+where string_time is in the format "[H]H:MM {AM|PM}"
+and minutes is an integer
+
+From console run rake console to test
 
 ## Contributing
 
