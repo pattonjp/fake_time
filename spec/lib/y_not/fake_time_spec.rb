@@ -39,11 +39,10 @@ describe FakeTime do
     it 'handles all' do
       (0..23).each do |hour|
         @start_time = Time.utc(2014,1,1,hour,0)
-        (1..100000).each do |min|
+        (1..100000).step(10).each do |min|
           @start_input = @start_time.strftime("%l:%M %p").strip
           @fake_time = FakeTime.parse @start_input
           validate_time min
-
         end
       end
     end
@@ -53,7 +52,6 @@ def validate_time min
       expected = time.strftime("%l:%M %p").strip
       @fake_time.add_minutes min
       result = @fake_time.to_s
-
       result.should eq(expected), "expected #{expected}, got #{result} starting at: #{@start_time.strftime("%l:%M %p").strip} add: #{min} #{min/60}"
     end
 end
