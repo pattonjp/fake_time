@@ -4,7 +4,7 @@ describe FakeTime do
 
   describe 'one offs' do
     before(:each) do
-      @start_time = Time.new(2014,1,1,11,0)
+      @start_time = Time.utc(2014,1,1,11,0)
       @start_input = @start_time.strftime("%l:%M %p").strip
       @fake_time = FakeTime.parse @start_input
     end
@@ -38,7 +38,7 @@ describe FakeTime do
   describe 'bulk test' do
     it 'handles all' do
       (0..23).each do |hour|
-        @start_time = Time.new(2014,1,1,hour,0)
+        @start_time = Time.utc(2014,1,1,hour,0)
         (1..100000).each do |min|
           @start_input = @start_time.strftime("%l:%M %p").strip
           @fake_time = FakeTime.parse @start_input
