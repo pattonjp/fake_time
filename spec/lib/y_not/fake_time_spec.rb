@@ -37,13 +37,12 @@ describe FakeTime do
 
   describe 'bulk test' do
     it 'handles all' do
-      (0..12).each do |hour|
+      (0..23).each do |hour|
         @start_time = Time.utc(2014,1,1,hour,0)
-        (1..100000).each do |min|
+        (1..100000).step(10).each do |min|
           @start_input = @start_time.strftime("%l:%M %p").strip
           @fake_time = FakeTime.parse @start_input
           validate_time min
-
         end
       end
     end
